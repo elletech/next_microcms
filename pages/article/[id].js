@@ -1,4 +1,4 @@
-import { client } from '../../libs/client'
+import { client } from '../../libs/client';
 
 export default function Article({ article }) {
   return (
@@ -15,11 +15,11 @@ export default function Article({ article }) {
             </div>
           </div>
           {article.tag && (
-          <div class="flex items-center justify-start mt-4 mb-4">
-            <div class="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
-              #{article.tag}
+            <div class="flex items-center justify-start mt-4 mb-4">
+              <div class="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
+                #{article.tag}
+              </div>
             </div>
-          </div>
           )}
 
           <div class="mt-2">
@@ -30,16 +30,16 @@ export default function Article({ article }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export const getServerSideProps = async (ctx) => {
-  const id = ctx.params.id
-  const data = await client.get({ endpoint: 'articles', contentId: id })
+export const getServerSideProps = async ctx => {
+  const id = ctx.params.id;
+  const data = await client.get({ endpoint: 'articles', contentId: id });
 
   return {
     props: {
       article: data,
     },
-  }
-}
+  };
+};
