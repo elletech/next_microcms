@@ -10,7 +10,7 @@ export default function Article({ article }) {
             src={article.eye_catch.url}
           />
           <div class="mt-2">
-            <div class="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500  hover:underline">
+            <div class="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500">
               {article.title}
             </div>
           </div>
