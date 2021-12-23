@@ -14,11 +14,13 @@ export default function Article({ article }) {
               {article.title}
             </div>
           </div>
+          {article.tag && (
           <div class="flex items-center justify-start mt-4 mb-4">
             <div class="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
               #{article.tag}
             </div>
           </div>
+          )}
 
           <div class="mt-2">
             <div class="text-2xl text-gray-700 mt-4 rounded ">
