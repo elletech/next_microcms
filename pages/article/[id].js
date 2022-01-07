@@ -2,7 +2,7 @@ import { client } from '../../libs/client';
 
 export default function Article({ article }) {
   return (
-    <div class="mt-6 bg-gray-50">
+    <div class="bg-gray-50">
       <div class=" px-10 py-6 mx-auto">
         <div class="max-w-6xl px-10 py-6 mx-auto bg-gray-50">
           <img
